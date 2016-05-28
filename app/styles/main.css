@@ -79,6 +79,7 @@ body{
   height: 100%;
   min-height: 100%;
   display: block;
+  overflow: auto;
 }
 #inicio{
   top:0;
@@ -87,14 +88,11 @@ body{
   top:100%;
 }
 .left{
-  float: left;
-  width: 60%;
-  margin-top: 80px;
+  margin-top: 60px;
   font-size: 17px;
+  text-align: justify;
 }
 .santafe{
-  float: right;
-  width: 40%;
   margin-top: 120px;
 }
 #productos{
@@ -137,6 +135,7 @@ body{
 #confianza .container-fluid{
   margin-top: 50px;
 }
+
 #contacto{
  top:400%; 
 }
