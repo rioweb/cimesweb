@@ -108,15 +108,67 @@ body{
   min-height: 180px;
   border-radius: 10px;
 }
+.prod.active{
+  -webkit-animation: changeBorder 1s forwards linear;
+}
+.prod:hover{
+  cursor: pointer;
+}
+@-webkit-keyframes changeBorder {
+  from {
+  border:1px solid rgba(84,137,196,0.6);
+  }
+  to {
+  border: 3px solid rgba(814,17,96,0.9);
+  }
+}
 .produc{
   max-height: 120px;
+  margin: 0 auto;
 }
-.abs{
-  position: absolute;
+.carous,.item,.item.active{ 
+  height: 520px;
 }
-.carous{
+.item{
   max-height: 555px;
 }
+.carousel, 
+.carousel-inner, 
+.carousel-inner .item {
+    height: 100%;
+}
+.carousel-fade {
+    .carousel-inner {
+        .item {
+            transition-property: opacity;
+        }
+        
+        .item,
+        .active.left,
+        .active.right {
+            opacity: 0;
+        }
+
+        .active,
+        .next.left,
+        .prev.right {
+            opacity: 1;
+        }
+
+        .next,
+        .prev,
+        .active.left,
+        .active.right {
+            left: 0;
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+    .carousel-control {
+        z-index: 2;
+    }
+}
+
 .well{
   position: relative; important!
   width: 100%;
@@ -126,7 +178,7 @@ body{
   font-size: 18px;
 }
 .carouimg{
-  max-height: 400px;
+  max-height: 420px;
   margin: 0 auto;
 }
 #confianza{
@@ -135,11 +187,9 @@ body{
 #confianza .container-fluid{
   margin-top: 50px;
 }
-
 #contacto{
  top:400%; 
 }
-
 #contacto iframe{
   position: relative;
   margin-top: 100px;

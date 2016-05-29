@@ -8,7 +8,15 @@ $('.nav li, .nav li a').click(function (e) {
 		$('ul.nav > li').removeClass('active');
             $(this).addClass('active');
   	}); 
-
+$('.nav li, .nav li a').hover(function (e) {
+    e.preventDefault();
+    $('ul.nav > li').removeClass('active');
+            $(this).addClass('active');
+    }); 
+$('.nav a').on('click', function(){
+    $('.btn-navbar').click(); //bootstrap 2.x
+    $('.navbar-toggle').click() //bootstrap 3.x by Richard
+});
 
 
 
@@ -27,7 +35,6 @@ $(function(){
 			}
 		})
 	});
-
 
   	var topoffset = 50;
 
@@ -80,7 +87,7 @@ if (window.matchMedia("(min-width: 800px)").matches) {
   });
 
   $('.carousel').carousel({
-   interval: 100000, pause: "true"
+   interval: 100000
   });
 
 };
