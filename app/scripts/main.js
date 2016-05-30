@@ -8,17 +8,11 @@ $('.nav li, .nav li a').click(function (e) {
 		$('ul.nav > li').removeClass('active');
             $(this).addClass('active');
   	}); 
-$('.nav li, .nav li a').hover(function (e) {
-    e.preventDefault();
-    $('ul.nav > li').removeClass('active');
-            $(this).addClass('active');
-    }); 
-$('.nav a').on('click', function(){
-    $('.btn-navbar').click(); //bootstrap 2.x
-    $('.navbar-toggle').click() //bootstrap 3.x by Richard
-});
 
 
+var weight = $(window).height();
+
+$('.fullheight').css('height',weight);
 
 $(function(){
 
@@ -38,13 +32,10 @@ $(function(){
 
   	var topoffset = 50;
 
-
 	$('body').scrollspy({ 
 		target: 'header .navbar',
 		offset: topoffset 
 	});
-
-
 
 
 if (window.matchMedia("(min-width: 800px)").matches) {
@@ -86,8 +77,8 @@ if (window.matchMedia("(min-width: 800px)").matches) {
       }
   });
 
-  $('.carousel').carousel({
-   interval: 100000
+  $('#carousel-example-generic').carousel({
+   interval: 5000
   });
 
 };
@@ -103,11 +94,11 @@ var progress = setInterval(function () {
     if ($bar.width() / 6 == 100){
       $bar.text("Cargando ... " + $bar.width() / 6 + "%");
     }
-}, 800);
+}, 700);
 
 $(window).load(function() {
   $("#bar").width(600);
-  $(".loader").fadeOut(3000);
+  $(".loader").fadeOut(2500);
 });
 
 jQuery(document).ready(main);
