@@ -193,7 +193,7 @@ body{
   top: 0;
   right: 0;
   overflow: hidden;
-  height: 100%;
+  height: 80%;
 }
 .empresa,.empresa2,.empresa3{
   margin: 5px; 
@@ -369,6 +369,13 @@ a.scroll-arrow:hover {
   }
 .form-group {
     margin-bottom: 5px;
+}
+.data{
+  position: absolute;
+  float: right;
+  height: 20%;
+  z-index: 10;
+  bottom: 0;
 }
 
 /* Responsive: Portrait tablets and up */
