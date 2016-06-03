@@ -7,6 +7,15 @@ import {stream as wiredep} from 'wiredep';
 
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
+var phantom = require("gulp-phantom");
+
+gulp.task('phantom', function(){
+  gulp.src("./phantom/*.js")
+    .pipe(phantom({
+      ext: json
+    }))
+    .pipe(gulp.dest("./data/"));
+});
 
 gulp.task('styles', () => {
   return gulp.src('app/styles/*.css')
