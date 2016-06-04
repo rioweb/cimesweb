@@ -234,41 +234,97 @@ El sistema de aseguramiento de calidad de productos de CIMES se centra en el ade
     
     <div id="contacto" class="fullheight">
       <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6">      <div class="container-fluid">
         <form class="form-horizontal" action="send.php" method="post">
           <fieldset>
       <div class="form-group">
+         <!--
              <label class="control-label">Nombre</label>
          <div class="controls">
           <input placeholder="Nombre" class="form-control" type="text" name="nombre">
         </div>
-      </div>
-    <div class="form-group">
-      <label class="control-label">E-Mail</label>
-      <div class="controls">
-        <input class="form-control" placeholder="E-Mail" type="email" name="email">
-      </div>
+      -->
+        <div class="form-group">
+  <label class="col-md-12 control-label">Nombre</label>  
+  <div class="col-md-12 inputGroupContainer">
+  <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input  name="first_name" placeholder="Nombre" class="form-control"  type="text">
     </div>
-    <div class="form-group">
-      <label class="control-label">Ciudad</label>
-      <div class="controls">
-        <input placeholder="Ingrese su Ciudad" type="text" name="ciudad">
-      </div>
-    </div>
-    <div class="form-group">
-      <label class="control-label">Telefono</label>
-      <div class="controls">
-        <input placeholder="Ingrese su Teléfono" type="text" name="telefono">
-      </div>
-    </div>
-    <div class="form-group">
-      <label class="control-label">Consulta</label>
-      <div>
-        <textarea rows="5" cols="70" placeholder="Ingrese su consulta" name="consulta"></textarea>
-      </div>
-    </div>
-  <div class="form-actions">
-    <input type="submit" name="enviar" value="Enviar" class="btn btn-primary sub">
   </div>
+</div>
+
+<!-- Text input-->
+       <div class="form-group">
+  <label class="col-md-12 control-label">E-Mail</label>  
+    <div class="col-md-12 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+  <input name="email" placeholder="E-Mail" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
+
+
+<!-- Text input-->
+       
+<div class="form-group">
+  <label class="col-md-12 control-label">Telefono</label>  
+    <div class="col-md-12 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+  <input name="phone" placeholder="(341)999-9999" class="form-control" type="text">
+    </div>
+  </div>
+</div>
+
+<!-- Text input-->
+      
+<div class="form-group">
+  <label class="col-md-12 control-label">Direccion</label>  
+    <div class="col-md-12 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+  <input name="address" placeholder="Direccion" class="form-control" type="text">
+    </div>
+  </div>
+</div>
+
+<!-- Text input-->
+ 
+<div class="form-group">
+  <label class="col-md-12 control-label">Ciudad</label>  
+    <div class="col-md-12 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+  <input name="city" placeholder="Ingrese su ciudad" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
+
+  
+<div class="form-group">
+  <label class="col-md-12 control-label">Mensaje</label>
+    <div class="col-md-12 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+          <textarea class="form-control" name="comment" placeholder="Ingrese su mensaje"></textarea>
+  </div>
+  </div>
+</div>
+
+<!-- Success message -->
+<div class="alert alert-success" role="alert" id="success_message">Recibido! <i class="glyphicon glyphicon-thumbs-up"></i> Gracias por consultarnos.<br> Nos pondremos en contacto inmediatamente!.</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label"></label>
+  <div class="col-md-8">
+    <button type="submit" class="btn btn-warning" >Enviar <span class="glyphicon glyphicon-send"></span></button>
+  </div>
+</div>
+
 
 
 </fieldset>
@@ -276,19 +332,24 @@ El sistema de aseguramiento de calidad de productos de CIMES se centra en el ade
 </form>
 
       </div>
-
-    <iframe
-      width="100%"
-      height="80%"
-      frameborder="0" style="border:0"
-      src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA5cFsG_A_zEOdrWod2xgO2Z1DfXCskA9I
-        &q=Biedma+2450,Rosario,AR" allowfullscreen>
-    </iframe>
-    <div class="well data">
-    <p>Embotelladora Messina : <span>Biedma 2640 - Rosario</span></p>
-    <p>Telefono<span>0341-4316806 / 4232640</span></p>
-    <p>Correo:<span>contacto@cimesmessina.com</span></p>
+</div>
+  <div class="col-md-6">
+    <div class="data">  
+      <p class="mess">Embotelladora Messina </p>
+      <p><span class="glyphicon glyphicon-home xxleft" aria-hidden="true"></span>  <span>Biedma 2450 - Rosario</span></p>
+      <p><span class="glyphicon glyphicon-earphone xxleft" aria-hidden="true"></span><span>0341-4316806 / 4232640</span></p>
+      <p><span class="glyphicon glyphicon-envelope xxleft" aria-hidden="true"></span><span>contacto@cimesmessina.com</span></p>
+      <p><i class="fa fa-facebook-official xxleft" aria-hidden="true"></i><span>facebook.com/cimesmessina</span></p>
+      
+    </div>
+    <div id="map"></div>
   </div>
+</div>
+
+
+      </div>
+</div>
+
     </div>
     <div id="sumate" class="fullheight">
       <div class="container-fluid">
