@@ -102,6 +102,7 @@ body{
 }
 .santafe{
   margin-top: 120px;
+  float: right;
 }
 /*******************************************/
 
@@ -181,7 +182,7 @@ body{
   margin-top: 50px;
 }
 #contacto{
- top:400%; 
+ top:400%;
 }
 
 .empresa,.empresa2,.empresa3{
@@ -337,12 +338,13 @@ span.input-group-addon{
     padding: 7px 10px ;
 }
 #contacto form {
+  display: block;
     height: 100%;
     padding: 25px 56px 30px;
     background-color: rgba(228,235,243,0.8);
   }
 #contacto form input, #contacto form textarea {
-    display: block;
+    
     border: none;
     border-radius: 0;
     background-color: white;
@@ -352,7 +354,7 @@ span.input-group-addon{
 #contacto form [type="submit"] {
     background-color: #0672ba;
     color: white;
-    display: block;
+    
     height: 52px;
     font-size: 23px;
     width: 100%;    
@@ -360,8 +362,10 @@ span.input-group-addon{
 .form-group {
     margin-bottom: 5px;
 }
-#contacto .row .col-md-6{
-  margin-top: 60px;
+#contacto .row .col-sm-6{
+ 
+  display: block;
+  margin-top: 80px;
   margin-bottom: 50px;
   height: 100%;
 }
