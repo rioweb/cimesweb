@@ -42,7 +42,7 @@ body{
   top: 0;
   width: 100%;
   height: 100%;
-  z-index: 99;
+  z-index: 999;
   background: url('https://6ed03b3e7ee716b29bc2dee79aafb8179ed53b19-www.googledrive.com/host/0B9VLbslO6g64UnFTUlQzWDVMdXM') 50% 50% no-repeat rgb(249,249,249);
 }
 .loader-container {
