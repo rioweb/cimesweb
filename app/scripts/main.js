@@ -73,7 +73,7 @@ if (window.matchMedia('(min-width: 800px)').matches) {
 
   /* exported waypoint */
   $('#carousel-example-generic').carousel({
-   interval: 5000
+   interval: 50000
   });
    // Normalize Carousel Heights - pass in Bootstrap Carousel items.
 $.fn.carouselHeights = function() {
@@ -129,11 +129,11 @@ var progress = setInterval(function () {
     if ($bar.width() / 6 === 100){
       $bar.text('Cargando ... ' + $bar.width() / 6 + '%');
     }
-}, 700);
+}, 800);
 
 $(window).load(function() {
   $('#bar').width(600);
-  $('.loader').fadeOut(2500);
+  $('.loader').fadeOut(3000);
 });
 
 $(document).ready(main);

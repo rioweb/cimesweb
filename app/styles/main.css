@@ -110,18 +110,6 @@ body{
   top:200%;
   padding-top: 80px;
 }
-/*
-.carousel .item>img {
-    position: absolute;
-    top: 0;
-    left: 0;    height: 100%;
-}
-.carousel-inner > .item > img {
-   
-    top: 0;
-    left: 0;
-    max-height: 600px;
-}*/
 .ochenta{
   border:2px solid rgba(6,114,186,0.7);
   border-radius: 10px;
@@ -340,11 +328,11 @@ span.input-group-addon{
 #contacto form {
   display: block;
     height: 100%;
+    margin-top: 30px;
     padding: 25px 56px 30px;
     background-color: rgba(228,235,243,0.8);
   }
 #contacto form input, #contacto form textarea {
-    
     border: none;
     border-radius: 0;
     background-color: white;
