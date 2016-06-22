@@ -10,10 +10,10 @@ $('.nav li, .nav li a').click(function (e) {
 		$('ul.nav > li').removeClass('active');
             $(this).addClass('active');
 });
-var weight = $(window).height();
-
-$('.fullheight').css('height', weight);
-
+if (window.matchMedia('(max-width: 480px)').matches) {
+  var weight = $(window).height();
+  $('.fullheight').css('height', weight);
+}
 $(function(){
 
     $('a[href*= "#" ]:not([href= "#" ])').click(function() {
@@ -36,8 +36,9 @@ $(function(){
 		offset: topoffset
 	});
 
+
 if (window.matchMedia('(min-width: 800px)').matches) {
-      var hash = $(this).find('li.active a').attr('href');
+  var hash = $(this).find('li.active a').attr('href');
   if(hash !== '#inicio') {
       $('header nav').removeClass('hidden');
       $('header nav').fadeIn('slow').addClass('visible');
