@@ -10,10 +10,12 @@ $('.nav li, .nav li a').click(function (e) {
 		$('ul.nav > li').removeClass('active');
             $(this).addClass('active');
 });
-if (window.matchMedia('(max-width: 480px)').matches) {
+if(window.matchMedia('(max-width: 480px)').matches) {
   var weight = $(window).height();
   $('.fullheight').css('height', weight);
-}
+  
+};
+
 $(function(){
 
     $('a[href*= "#" ]:not([href= "#" ])').click(function() {

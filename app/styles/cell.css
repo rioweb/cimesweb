@@ -12,9 +12,13 @@
     .mainlogo{
       width: 280px;
       }
+      
+  #inicio {
+    height: 100vh !important;
+}
+      
       #contacto{
-        min-height: 200%;
-        height: 200%;
+        height: auto;
         background-color: rgba(228,235,243,0.8); 
       }
       #contacto form {
@@ -54,21 +58,36 @@
     .data{
       margin:0px;
       margin-top: 50px;
+      padding-bottom: 10px;
     }
 /**********************/
+
+#nosotros{
+  height: auto;
+  padding-top: 00px;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+}
     .left{
       font-size: 13px;
     }
     .santafe{
+    margin-top: 25px;
     max-height: 200px;
-    margin-top: 75px;
     }
+    .messina{
+      font-size: 16px;
+  margin-top: 30px;
+}
 /********** Cell Productos***********/
-  
+    #productos{
+      padding-top: 15px;
+      padding-bottom: 30px;
+    }
     .carou{
       position: relative;
       height: 50%;
-      max-height: 250px;
+      max-height: 240px;
     }
     .item{
       position: relative;
@@ -103,6 +122,9 @@
     #confianza h1{
       font-size: 16px;
     }
+    #confianza .container-fluid{
+  margin-top: 0px;
+}
     .prod{
       min-height: 0px;
       height: auto;
@@ -120,11 +142,17 @@
       font-size: 24px;
     }
     #sumate{
-      top:600%;
      background-position: center 95%;
      background-size: 50%;
      padding-top: 20px;
-     height: 130%;
+     padding-bottom: 200px;
+     height: auto;
     }
+    #medal{
+  position: absolute;
+  bottom: 0;
+  margin: 0 auto;
+  left: 50%;
+}
 
 }
