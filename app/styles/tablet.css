@@ -1,0 +1,71 @@
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 480px) and (max-width: 990px) {
+
+	#inicio {
+    height: 100vh !important;
+}
+    .left{
+      font-size: 15px;
+    }
+    .santafe{
+    margin-top: 25px;
+    max-height: 200px;
+    }
+    #productos{
+    	margin-top: 0px;
+    	margin-bottom: 30px;
+    	padding-bottom: 30px;
+    }
+	.carousel-inner{
+	height: 400px;
+	padding-bottom: 0px;
+	margin-bottom:0px; 
+	}
+	.carousel-inner > .item > img{
+		max-height: 300px;
+	}
+	.carou{
+
+  max-height: 400px;
+  padding-bottom: 0px;
+}
+.prod{
+  min-height: 100px;
+  height: auto;
+  padding: 20px;
+  padding-bottom: 30px;
+  }
+.prod p{
+  color: white;
+  border-top:1px solid rgba(6,114,186,0.7);;
+  padding-top: 0px;
+  min-height: 0px;
+  height: 0px;
+}
+#contacto form {
+    margin-top: 0px;
+    }
+
+#contacto .row .col-sm-6{
+	margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 480px) and (max-width: 990px) {
+			.prod{
+  min-height: 120px;
+  height: auto;
+  padding: 0px;
+  padding-bottom: 0px;
+  }
+.prod p{
+  color: white;
+  border-top:1px solid rgba(6,114,186,0.7);;
+  padding-top: 0px;
+  min-height: 50px;
+  height: auto;
+}
+	}

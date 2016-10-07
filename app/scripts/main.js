@@ -10,9 +10,11 @@ $('.nav li, .nav li a').click(function (e) {
 		$('ul.nav > li').removeClass('active');
             $(this).addClass('active');
 });
-var weight = $(window).height();
-
-$('.fullheight').css('height', weight);
+if(window.matchMedia('(max-width: 480px)').matches) {
+  var weight = $(window).height();
+  $('.fullheight').css('height', weight);
+  
+};
 
 $(function(){
 
@@ -36,8 +38,9 @@ $(function(){
 		offset: topoffset
 	});
 
+
 if (window.matchMedia('(min-width: 800px)').matches) {
-      var hash = $(this).find('li.active a').attr('href');
+  var hash = $(this).find('li.active a').attr('href');
   if(hash !== '#inicio') {
       $('header nav').removeClass('hidden');
       $('header nav').fadeIn('slow').addClass('visible');
@@ -73,7 +76,7 @@ if (window.matchMedia('(min-width: 800px)').matches) {
 
   /* exported waypoint */
   $('#carousel-example-generic').carousel({
-   interval: 5000
+   interval: 50000
   });
    // Normalize Carousel Heights - pass in Bootstrap Carousel items.
 $.fn.carouselHeights = function() {
@@ -129,11 +132,11 @@ var progress = setInterval(function () {
     if ($bar.width() / 6 === 100){
       $bar.text('Cargando ... ' + $bar.width() / 6 + '%');
     }
-}, 700);
+}, 800);
 
 $(window).load(function() {
   $('#bar').width(600);
-  $('.loader').fadeOut(2500);
+  $('.loader').fadeOut(3000);
 });
 
 $(document).ready(main);

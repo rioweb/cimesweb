@@ -9,16 +9,25 @@
 html,body{
   padding: 0;
   margin:0;
+  text-rendering: optimizeLegibility;
 }
 body{
   position: relative; 
 }
-
+#medal{
+  position: absolute;
+  bottom: 0;
+  margin: 0 auto;
+  left: 70%;
+}
+.fullheight{
+  height: 100vh;
+}
 .navbar{
   color:white;
 }
 .navbar-default {
-  background-color: #0672ba;
+  background-color: rgba(6,114,186,0.9);
   border: none;
 }
 .navbar-default .navbar-brand,.navbar-default .navbar-nav > li > a{
@@ -42,7 +51,7 @@ body{
   top: 0;
   width: 100%;
   height: 100%;
-  z-index: 99;
+  z-index: 999;
   background: url('https://6ed03b3e7ee716b29bc2dee79aafb8179ed53b19-www.googledrive.com/host/0B9VLbslO6g64UnFTUlQzWDVMdXM') 50% 50% no-repeat rgb(249,249,249);
 }
 .loader-container {
@@ -77,10 +86,9 @@ body{
 }
 
 #inicio,#nosotros,#productos,#confianza,#contacto,#sumate{
-  position: absolute;
+  position: relative;
   width: 100%;
   display: block;
-  overflow: hidden;
 }
 
 
@@ -88,7 +96,8 @@ body{
   top:0;
 }
 #nosotros{
-  top:100%;
+  padding-top: 40px;
+  margin-bottom: 60px;
 }
 .borde{
   border:2px solid rgba(6,114,186,0.7);
@@ -96,31 +105,22 @@ body{
   padding: 10px;  
 }
 .left{
-  margin-top: 70px;
-  font-size: 17px;
+  font-size: 1.288em;
   text-align: justify;
 }
 .santafe{
   margin-top: 120px;
+  float: right;
+}
+.messina{
+  font-size: 2em;
 }
 /*******************************************/
 
 #productos{
-  top:200%;
+
   padding-top: 80px;
 }
-/*
-.carousel .item>img {
-    position: absolute;
-    top: 0;
-    left: 0;    height: 100%;
-}
-.carousel-inner > .item > img {
-   
-    top: 0;
-    left: 0;
-    max-height: 600px;
-}*/
 .ochenta{
   border:2px solid rgba(6,114,186,0.7);
   border-radius: 10px;
@@ -141,24 +141,30 @@ body{
 }
 .item img, .produc img{
   margin: 0 auto;
-
   position: relative;
 }
 .prod{
-  min-height: 150px;
-  border:2px solid rgba(6,114,186,0.7);
-  border-radius: 10px;
+  min-height: 140px;
+  background-color: white;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  border-radius: 3px;
   height: 160px;
   margin-top: 5px;
   text-align: center;
-  padding: 0px 10px;
+  padding: 0px 0px;
+  display: block;
 }
 .prod:hover{
-  border:4px solid rgba(13,63,96,0.7);
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
 }
 .prod p{
+  color: white;
   border-top:1px solid rgba(6,114,186,0.7);;
-  padding-top: 4px;
+  padding-top: 8px;
+  min-height: 60px;
+  background-color: rgba(6,114,186,0.7);
+  margin-bottom: 0px;
+  padding-bottom: 0px;
 }
 .prod.hover{
 
@@ -174,36 +180,23 @@ body{
 
 
 /*******************************************/
-#confianza{
-  top:300%;
-}
+
 #confianza .container-fluid{
   margin-top: 50px;
 }
-#contacto{
- top:400%; 
-}
-#contacto iframe{
-  position: absolute;
-  float: right;
-  margin-top: 100px;
-  width: 70%;
 
-  z-index: -100;
-  top: 0;
-  right: 0;
-  overflow: hidden;
-  height: 80%;
-}
+
 .empresa,.empresa2,.empresa3{
   margin: 5px; 
   padding:15px;
-  max-height: 150px;
+  max-height: 135px;
   border:1px solid #d8e4ff;
-  border-radius: 5px;
+  border-radius: 3px;
   transform: scale(0);
   opacity: 0;
   display: none;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
   }
 .empresa.active {
   transition: transform .4s ease-in-out,
@@ -229,7 +222,11 @@ body{
     opacity: 1;
     animation: anim .14s ease-in-out;
 }
-
+.empresa:hover,
+.empresa2:hover,
+.empresa3:hover{
+  box-shadow:0 3px 15px black;
+}
 @keyframes anim {
   0% {
     display: none;
@@ -246,13 +243,13 @@ body{
   }
 }
 #sumate{
-  top:500%;
  background:url('/images/corona.png');
  background-repeat: no-repeat;
  background-position: left;
  background-size: 50%;
- padding-top: 130px;
- 
+ padding-top: 30px;
+ padding-bottom: 40px;
+ min-height: 600px;
 }
 #sumate h1 , #sumate p{
   float: right;
@@ -337,24 +334,27 @@ a.scroll-arrow:hover {
     color: #fff;
     line-height: 32px;
 }
-
+#contacto {
+  background-color:  #0672ba;
+}
+.form-horizontal .control-label{
+  text-align: left;
+}
+span.input-group-addon{
+  margin-top: 0px;
+    padding: 7px 10px ;
+}
 #contacto form {
-  position: absolute;
-    left: 0;
-    width: 30%;
-    height: 100%;
+  display: block;
+    height: auto;
+    margin-top: 30px;
     padding: 25px 56px 30px;
     background-color: rgba(228,235,243,0.8);
-    margin-top: 100px;
-    right: 100px;
-    z-index: 1;
-}
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  }
 #contacto form input, #contacto form textarea {
-    display: block;
-    margin-bottom: 5px;
     border: none;
     border-radius: 0;
-    padding: 3px;
     background-color: white;
     width: 100%;
     font-size: 16px;
@@ -362,7 +362,7 @@ a.scroll-arrow:hover {
 #contacto form [type="submit"] {
     background-color: #0672ba;
     color: white;
-    display: block;
+    
     height: 52px;
     font-size: 23px;
     width: 100%;    
@@ -370,14 +370,43 @@ a.scroll-arrow:hover {
 .form-group {
     margin-bottom: 5px;
 }
-.data{
-  position: absolute;
-  float: right;
-  height: 20%;
-  z-index: 10;
-  bottom: 0;
+#contacto .row .col-sm-6{
+ 
+  display: block;
+  margin-top: 80px;
+  margin-bottom: 50px;
+  height: 100%;
 }
-
+#success_message {
+    display: none;
+}
+.data{
+  bottom: 0;
+  background-color: #0672ba;
+  margin: 30px;
+  color:white;
+  text-align: center;
+}
+.data .mess{
+  background-color: white;
+  color:#0672ba;
+  font-size: 20px;
+  margin-bottom: 20px;
+} 
+.xxleft{
+  margin-right: 10px;
+}
+#map{
+  display: block;
+  background: url('/images/map.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 100%;
+  height: 300px;
+}
+#sumate{
+  padding-bottom: 50px;
+}
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   
@@ -388,8 +417,6 @@ a.scroll-arrow:hover {
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {  }
 
-/* Portrait tablet to landscape and desktop */
-@media (min-width: 768px) and (max-width: 979px) {  }
+
 
 /* Large desktop */
-@media (min-width: 1200px) { }
