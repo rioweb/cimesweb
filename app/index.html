@@ -49,9 +49,7 @@ https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css"/
       <div class="loader">
   <div class="loader-container">
     
-    <div class="progress progress-striped active">
-      <div class="progress-bar progress-bar-color" id="bar" role="progressbar" style="width: 0%;"></div>
-    </div>
+    <div class="loaders"></div>
   </div>
 </div> 
    
@@ -276,7 +274,7 @@ El sistema de aseguramiento de calidad de productos de CIMES se centra en el ade
           <div class="col-md-12 inputGroupContainer">
             <div class="input-group">
               <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-              <input name="nombre" placeholder="Nombre" class="form-control" type="text"/>
+              <input name="nombre" type="text" required placeholder="Nombre" class="form-control" type="text"/>
             </div>
           </div>
         </div>
@@ -286,7 +284,7 @@ El sistema de aseguramiento de calidad de productos de CIMES se centra en el ade
         <div class="col-md-12 inputGroupContainer">
           <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-            <input name="email" placeholder="E-Mail" class="form-control" type="text"/>
+            <input name="email" type="email" required placeholder="E-Mail" class="form-control" type="text"/>
           </div>
         </div>
     </div>
@@ -296,7 +294,7 @@ El sistema de aseguramiento de calidad de productos de CIMES se centra en el ade
     <div class="col-md-12 inputGroupContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-  <input name="telefono" placeholder="(341)999-9999" class="form-control" type="text"/>
+  <input name="telefono" type="number" required placeholder="(341)999-9999" class="form-control" type="text"/>
     </div>
   </div>
 </div>
@@ -316,7 +314,7 @@ El sistema de aseguramiento de calidad de productos de CIMES se centra en el ade
     <div class="col-md-12 inputGroupContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-          <textarea class="form-control" name="comentario" placeholder="Ingrese su mensaje"></textarea>
+          <textarea class="form-control" required name="comentario" placeholder="Ingrese su mensaje"></textarea>
   </div>
   </div>
 </div>
